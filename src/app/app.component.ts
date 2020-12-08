@@ -116,7 +116,6 @@ export class AppComponent implements OnInit {
 
 
   toggle(card: Door): void {
-    console.log(this.doors.length);
     if (this.checkDate(card)) {
       card.isOpen = !card.isOpen;
     }
