@@ -11,7 +11,7 @@
         <div class="inner">
           <p *ngIf="!card.isOpen">
             {{start}}
-            {{end[card.number - 1]}}
+            {{end[card.number - 8]}}
           </p>
 
           <div class="cover"
@@ -20,6 +20,8 @@
                [class.onceOpened]="card.onceOpened"
           >
             {{getNumber(card)}}
+            <br>
+            nummer: {{card.number}}
           </div>
 
         </div>
