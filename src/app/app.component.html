@@ -17,6 +17,7 @@
           <div class="cover"
                [class.fold-out]="!card.isOpen"
                [class.collapse]="card.isOpen"
+               [class.onceOpened]="card.onceOpened"
           >
             {{card.number}}
           </div>

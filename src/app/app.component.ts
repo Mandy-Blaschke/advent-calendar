@@ -87,11 +87,12 @@ export class AppComponent implements OnInit {
   }
 
   createCards(): void {
-    for (let i = 1; i <= this.end.length; i++) {
+    for (let i = 9; i <= this.end.length; i++) {
       this.doors.push(
         {
           number: i,
           isOpen: true,
+          onceOpened: false,
         }
       );
     }
@@ -99,6 +100,7 @@ export class AppComponent implements OnInit {
 
   checkDate(card: Door): boolean {
     if (new Date() >= new Date(2020, 11, card.number)) {
+      card.onceOpened = true;
       return true;
     }
   }
@@ -114,4 +116,5 @@ export class AppComponent implements OnInit {
 interface Door {
   number: number;
   isOpen: boolean;
+  onceOpened: boolean;
 }
